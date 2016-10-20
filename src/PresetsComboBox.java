@@ -11,8 +11,8 @@ import javax.swing.JComboBox;
  */
 public class PresetsComboBox extends JComboBox<String>  implements ActionListener{
 	private static final long serialVersionUID = 1L;
-	private String[] options = { "None", "Easy", "Medium", "Hard", "Inhuman"  };
-	private int[][][] presets = {
+	private final String[] options = { "None", "Easy", "Medium", "Hard", "Inhuman"  };
+	public static final int[][][] presets = {
 		{
 			{ 0, 0, 0, 2, 6, 0, 7, 0, 1 },
 			{ 6, 8, 0, 0, 7, 0, 0, 9, 0 },
@@ -79,6 +79,12 @@ public class PresetsComboBox extends JComboBox<String>  implements ActionListene
 	@Override
 	public void actionPerformed(ActionEvent arg0) {
 		int idx = this.getSelectedIndex();
+		
+		selectPreset(idx);
+		
+	}
+	
+	public void selectPreset(int idx) {
 		Sudoku s = new Sudoku();
 		
 		System.out.println(options[idx]);

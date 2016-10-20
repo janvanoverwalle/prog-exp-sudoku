@@ -125,7 +125,7 @@ public class SudokuPanel extends JPanel {
 			}
 		}
 	}
-
+	
 	/**
 	 * Private method for checking if the number is okay in a sudoku.
 	 * 
