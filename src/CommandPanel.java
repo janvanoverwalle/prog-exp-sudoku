@@ -30,7 +30,7 @@ public class CommandPanel extends JPanel {
 		cButton = new ClearButton(sp);
 		pComboBox = new PresetsComboBox(sp);
 		pTextField = new TextField(8);
-		pLoopButton = new LoopButton(sp, pComboBox, pTextField);
+		pLoopButton = new LoopButton(sp);
 		
 		JPanel top = new JPanel();
 		top.setLayout(new FlowLayout(FlowLayout.LEFT));
