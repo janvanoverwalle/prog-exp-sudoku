@@ -11,7 +11,7 @@ class SolveThread implements Runnable {
 
 	public void run() {
 			for(int i = 0; i < _iterations; i++) {
-				int idx = ThreadLocalRandom.current().nextInt(1, Presets.getPresetLength());
+				int idx = ThreadLocalRandom.current().nextInt(1, Presets.getPresetLength()+1);
 				System.out.println("Iteration " + (i+1) + "/" + _iterations + " | Difficulty " + Presets.getNamedIndex(idx));
 				selectPreset(idx);
 				_sp.solve();
